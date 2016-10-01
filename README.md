@@ -7,7 +7,6 @@
 
 * [請教 .ssh/config 管理問題](https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=354860#forumpost354860)
 
-
 ## 功能簡易說明
 
 拆開維護不同host的設定，然後合併，產生最終的「~/.ssh/config」。
@@ -16,6 +15,15 @@
 ## 實做版本
 
 [prototype](prototype)
+
+
+## clone
+
+執行
+
+``` sh
+$ git clone https://github.com/samwhelp/util-make-ssh-config.git
+```
 
 ## manpage
 
