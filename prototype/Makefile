@@ -3,34 +3,47 @@ THE_MAKEFILE_FILE_PATH := $(abspath $(lastword $(MAKEFILE_LIST)))
 THE_BASE_DIR_PATH := $(abspath $(dir $(THE_MAKEFILE_FILE_PATH)))
 THE_BIN_DIR_PATH := $(THE_BASE_DIR_PATH)/bin
 
-.PHONY: usage clean home home-set home-read com com-set com-read
+PATH := $(THE_BIN_DIR_PATH):$(PATH)
 
-usage:
-	@$(THE_BIN_DIR_PATH)/usage.sh
+default: help
+.PHONY: default
+
+help:
+	@help.sh
+.PHONY: help
 
 clean:
-	@$(THE_BIN_DIR_PATH)/clean.sh
+	@clean.sh
+.PHONY: clean
 
 home:
-	@$(THE_BIN_DIR_PATH)/home.sh
+	@home.sh
+.PHONY: home
 
 home-set:
-	@$(THE_BIN_DIR_PATH)/home-set.sh
+	@home-set.sh
+.PHONY: home-set
 
 home-clean:
-	@$(THE_BIN_DIR_PATH)/home-clean.sh
+	@home-clean.sh
+.PHONY: home-clean
 
 home-read:
-	@$(THE_BIN_DIR_PATH)/home-read.sh
+	@home-read.sh
+.PHONY: home-read
 
 com:
-	@$(THE_BIN_DIR_PATH)/com.sh
+	@com.sh
+.PHONY: com
 
 com-set:
-	@$(THE_BIN_DIR_PATH)/com-set.sh
+	@com-set.sh
+.PHONY: com-set
 
 com-clean:
-	@$(THE_BIN_DIR_PATH)/com-clean.sh
+	@com-clean.sh
+.PHONY: com-clean
 
 com-read:
-	@$(THE_BIN_DIR_PATH)/com-read.sh
+	@com-read.sh
+.PHONY: com-read
